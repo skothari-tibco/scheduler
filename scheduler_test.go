@@ -336,3 +336,10 @@ func TestBadRecurrent(t *testing.T) {
 	assert.Nil(t, job)
 	assert.NotNil(t, err)
 }
+
+func TestMilliSecond(t *testing.T) {
+
+	job, err := Every(2).MilliSeconds().Run(test)
+	assert.NotNil(t, job)
+	assert.Nil(t, err)
+}

@@ -302,6 +302,11 @@ func (j *Job) timeOfDay(d time.Duration) *Job {
 	return j
 }
 
+func (j *Job) MilliSeconds() *Job {
+	return j.timeOfDay(time.Millisecond)
+
+}
+
 // Seconds sets the job to run every n Seconds where n was defined in the Every
 // function.
 func (j *Job) Seconds() *Job {
